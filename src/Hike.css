@@ -1,0 +1,6 @@
+.pagination:active{
+    color: blue;
+}
+.pagination{
+    cursor: pointer;
+}
