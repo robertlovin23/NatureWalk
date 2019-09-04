@@ -18,23 +18,22 @@ this.state={
     currentPage: 1,
     hikesPerPage: 10,
     lat: 0,
-    lng: 0
+    lng: 0,
+    pageChange: false
     }
+    this.onTermSubmit("Denver")
  }
  handleClick = (event) =>{
    this.setState({
-     currentPage: Number(event.target.id)
+     currentPage: Number(event.target.id),
    })
- }
- onSearchSubmit() {
-   this.onTermSubmit(40.05, -105.5)
  }
  onSearchSubmit = async(lat, lng) => {
   const hikedata = await colorado.get(`/get-trails?`, {      
     params: {
             lat: lat,
             lon: lng,
-            maxDistance: 250,
+            maxDistance: 200,
             maxResults: 50,
             key: KEY
         }
@@ -42,7 +41,6 @@ this.state={
      this.setState({
          hikes: hikedata.data.trails
      })
-     console.log(hikedata.data.trails)
  }
  onTermSubmit = (term) => {
   Geocode.fromAddress(term).then(
@@ -60,6 +58,7 @@ this.state={
   )    
  }
   render() {
+    const page = this.state.pageChange ? 'active item' : 'item';
     const { hikes, hikesPerPage} = this.state;
     const pageNumbers = [];
     for(let i = 1; i <= Math.ceil(hikes.length / hikesPerPage); i++){
@@ -68,14 +67,14 @@ this.state={
     const renderPageNumbers = pageNumbers.map(number => {
       return (
         <div
-          key={number}
-          id={number}
-          onClick={this.handleClick}
-          style={{ display:"inline-block"}}
-          className="item"
-        >
-          {number}
-        </div>
+        key={number}
+        id={number}
+        onClick={this.handleClick}
+        style={{ display:"inline-block"}}
+        className="item"
+      >
+        <div>{number}</div>
+      </div>
       );
     });
     return (

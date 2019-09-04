@@ -4,10 +4,10 @@ import HikeMap from './GoogleMap'
 
 const HikeCard = ({ hike }) => {
         return(
-        <div className="eight wide column" key={hike.id} style={{width: "100%!important"}}>
-            <div className="ui card" style={{width: "550px"}}>
+        <div className="column" key={hike.id} style={{width: "100%!important"}}>
+            <div className="ui card" style={{width: "100%", marginBottom: "20px"}}>
                 <div className="image">
-                    <img src={hike.imgMedium} alt={hike.summary} style={{height: "300px"}}/>
+                    <img src={hike.imgMedium} alt={hike.summary} style={{height: "350px"}}/>
                 </div>
                 <div className="title" style={{marginTop:'10px', marginBottom:'10px'}}>
                     <h3><b>{hike.name}</b></h3>

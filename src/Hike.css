@@ -4,3 +4,17 @@
 .pagination{
     cursor: pointer;
 }
+.item{
+    margin: 0 auto;
+}
+#page-numbers{
+    margin: 0 auto;
+    display: inline-block;
+    align-content: center;
+}
+.marker{
+    width:20px;
+    height: 20px;
+    border-radius: 90%;
+    background-color: red;
+}

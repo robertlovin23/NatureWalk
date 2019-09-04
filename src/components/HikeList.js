@@ -10,9 +10,11 @@ const HikeList = ({ hikes, currentPage, hikesPerPage }) => {
             return <HikeCard key={index} hike={hike}/>
         })
         return(
-            <div className="ui grid container">
+        <div className="ui grid container">
+            <div className="doubling two column row" style={{alignContent: "center", display: "flex"}}>
                 {hikeList}
             </div>
+        </div>
         )
     }
 
