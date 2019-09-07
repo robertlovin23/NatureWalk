@@ -3,12 +3,10 @@ import GoogleMapReact from 'google-map-react'
 
 const MarkerComponent = ({text}) => {
     return(
-        <div className="marker">
-            
+        <div className="marker">           
         </div>
     )
 }
-
 class HikeMap extends React.Component {
     static defaultProps = {
         zoom: 11

@@ -1,13 +1,14 @@
 import React from 'react'
 import { Button, Modal } from 'semantic-ui-react'
 import HikeMap from './GoogleMap'
+import '../Hike.css'
 
 const HikeCard = ({ hike }) => {
         return(
         <div className="column" key={hike.id} style={{width: "100%!important"}}>
             <div className="ui card" style={{width: "100%", marginBottom: "20px"}}>
                 <div className="image">
-                    <img src={hike.imgMedium} alt={hike.summary} style={{height: "350px"}}/>
+                    <img src={hike.imgMedium} alt={hike.summary} className="imgSize"/>
                 </div>
                 <div className="title" style={{marginTop:'10px', marginBottom:'10px'}}>
                     <h3><b>{hike.name}</b></h3>
@@ -32,7 +33,6 @@ const HikeCard = ({ hike }) => {
                             <div class="ui medium image">
                                 <img src={hike.imgMedium} alt={hike.name}></img>
                             </div>
-
                             <div className="description">
                                 <div className="ui header"><b><h3>{hike.name}</h3></b></div>
                                 <p>{hike.summary}</p>

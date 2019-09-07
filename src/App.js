@@ -28,12 +28,12 @@ this.state={
      currentPage: Number(event.target.id),
    })
  }
- onSearchSubmit = async(lat, lng) => {
+ componentDidMount = async(lat, lng) => {
   const hikedata = await colorado.get(`/get-trails?`, {      
     params: {
             lat: lat,
             lon: lng,
-            maxDistance: 200,
+            maxDistance: 100,
             maxResults: 50,
             key: KEY
         }
@@ -50,7 +50,7 @@ this.state={
         lat: lat,
         lng: lng
       })
-      this.onSearchSubmit(lat,lng)
+      this.componentDidMount(lat,lng)
     },
     error => {
       console.log(error);
@@ -73,7 +73,7 @@ this.state={
         style={{ display:"inline-block"}}
         className="item"
       >
-        <div>{number}</div>
+        {number}
       </div>
       );
     });
@@ -81,10 +81,13 @@ this.state={
       <div>
         <SearchBar onFormSubmit={this.onTermSubmit}/>
         <HikeList hikes={this.state.hikes} currentPage={this.state.currentPage} hikesPerPage={this.state.hikesPerPage}/>
-        <div id = "page-numbers" className="ui pagination menu">
-          <h3>{renderPageNumbers}</h3>
+        <div className="ui container">
+          <div id = "page-numbers" className="ui pagination menu">
+            <h3>{renderPageNumbers}</h3>
+          </div>
         </div>
       </div>
+
     )
   }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import HikeCard from './HikeCard'
 
 const HikeList = ({ hikes, currentPage, hikesPerPage }) => {
+    
         const indexOfLastHike = currentPage * hikesPerPage;
         const indexOfFirstHike = indexOfLastHike - hikesPerPage;
         const currentHikes = hikes.slice(indexOfFirstHike, indexOfLastHike);

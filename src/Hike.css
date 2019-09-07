@@ -18,3 +18,11 @@
     border-radius: 90%;
     background-color: red;
 }
+.imgSize{
+    height:350px;
+}
+@media only screen and (max-width: 400px) {
+    .imgSize{
+        height: 250px;
+    }
+}
