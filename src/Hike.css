@@ -7,6 +7,9 @@
 .item{
     margin: 0 auto;
 }
+body{
+    background-color: #024009;
+}
 #page-numbers{
     margin: 0 auto;
     display: inline-block;
@@ -19,10 +22,10 @@
     background-color: red;
 }
 .imgSize{
-    height:350px;
+    height:350px!important;
 }
 @media only screen and (max-width: 400px) {
     .imgSize{
-        height: 250px;
+        height: 200px!important;
     }
 }

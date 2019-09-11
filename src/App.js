@@ -19,21 +19,26 @@ this.state={
     hikesPerPage: 10,
     lat: 0,
     lng: 0,
-    pageChange: false
+    pageChange: false,
+    minLength: '0',
+    minStars: '0'
     }
-    this.onTermSubmit("Denver")
+    this.onTermSubmit("Denver",'0','0')
  }
  handleClick = (event) =>{
    this.setState({
      currentPage: Number(event.target.id),
    })
  }
- componentDidMount = async(lat, lng) => {
+ componentDidMount = async(lat, lng, minLength,minStars,filter,maxDistance) => {
   const hikedata = await colorado.get(`/get-trails?`, {      
     params: {
             lat: lat,
             lon: lng,
-            maxDistance: 100,
+            minLength: minLength,
+            minStars: minStars,
+            sort: filter,
+            maxDistance: maxDistance,
             maxResults: 50,
             key: KEY
         }
@@ -42,7 +47,7 @@ this.state={
          hikes: hikedata.data.trails
      })
  }
- onTermSubmit = (term) => {
+ onTermSubmit = (term, minLength,minStars,filter,maxDistance) => {
   Geocode.fromAddress(term).then(
     response => {
       const { lat, lng } = response.results[0].geometry.location;
@@ -50,7 +55,7 @@ this.state={
         lat: lat,
         lng: lng
       })
-      this.componentDidMount(lat,lng)
+      this.componentDidMount(lat,lng,minLength, minStars,filter,maxDistance)
     },
     error => {
       console.log(error);
