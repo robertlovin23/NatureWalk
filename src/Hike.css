@@ -8,7 +8,7 @@
     margin: 0 auto;
 }
 body{
-    background-color: #024009;
+    background-color: lightgreen;
 }
 #page-numbers{
     margin: 0 auto;
@@ -23,6 +23,19 @@ body{
 }
 .imgSize{
     height:350px!important;
+}
+.header{
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; 
+    z-index: 1;
+}
+.splashScreen{
+    background-image: url('../src/components/img/coverimagedit.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
 @media only screen and (max-width: 400px) {
     .imgSize{

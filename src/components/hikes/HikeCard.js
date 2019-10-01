@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button, Modal } from 'semantic-ui-react'
 import HikeMap from './GoogleMap'
-import '../Hike.css'
+
+import '../../Hike.css'
 
 const HikeCard = ({ hike }) => {
         return(
@@ -31,7 +32,7 @@ const HikeCard = ({ hike }) => {
                         </div>
                         <div className="image content">
                             <div class="ui medium image">
-                                <img src={hike.imgMedium} alt={hike.name}></img>
+                                <img src={hike.imgMedium} alt={hike.name} style={{width:"400px", height: "200px"}}></img>
                             </div>
                             <div className="description">
                                 <div className="ui header"><b><h3>{hike.name}</h3></b></div>

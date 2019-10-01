@@ -3,8 +3,8 @@ import GoogleMapReact from 'google-map-react'
 
 const MarkerComponent = ({text}) => {
     return(
-        <div className="marker">           
-        </div>
+        <i className="big map pin icon">           
+        </i>
     )
 }
 class HikeMap extends React.Component {

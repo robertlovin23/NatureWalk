@@ -47,7 +47,7 @@ class SearchBar extends React.Component {
         return(
             <div className = "ui container segment" style={{marginTop: '10px'}}>
                 <form className="ui form">
-                    <div className="two fields">
+                    {/* <div className="two fields">
                         <div className="field">
                             <label>Minimum Trail Length (In Miles)</label>
                             <select className="fluid dropdown" value={this.state.minLength} onChange={this.onLengthChange}>
@@ -98,7 +98,7 @@ class SearchBar extends React.Component {
                                 <option value="150">150</option>
                             </select>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="field">
                         <label htmlFor="Search Bar">Search A Location</label>
                         <input type="text" 
