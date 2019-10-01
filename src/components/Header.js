@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../src/Hike.css'
 
 const Header = () => {
     return(

@@ -90,7 +90,7 @@ class HikePage extends React.Component{
     return (
       <div>
         <div className="sixteen column row splashScreen">
-          <div style={{paddingTop: "150px", paddingBottom: "150px"}}>
+          <div style={{paddingTop: "200px", paddingBottom: "200px"}}>
             <SearchBar onFormSubmit={this.onTermSubmit}/>
           </div>
         </div>
