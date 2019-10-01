@@ -10,10 +10,17 @@
 body{
     background-color: lightgreen;
 }
+.titleDiv{
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
 #page-numbers{
     margin: 0 auto;
     display: inline-block;
     align-content: center;
+}
+.mapStyles{
+    height:600px;
 }
 .marker{
     width:20px;
@@ -40,5 +47,12 @@ body{
 @media only screen and (max-width: 400px) {
     .imgSize{
         height: 200px!important;
+    }
+    .mapStyles{
+        height:300px;
+    }
+    .titleDiv{
+        padding-bottom: 100px;
+        padding-top: 100px;
     }
 }

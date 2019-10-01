@@ -1,5 +1,6 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
+import '../../Hike.css'
 
 const Marker = () => {
     return(
@@ -9,7 +10,7 @@ const Marker = () => {
 
 const HikeMap = ({hikes,lat,lng}) => {
     return(
-    <div className="ui container" style={{height: '600px', width: '100%'}}>
+    <div className="ui container mapStyles" style={{ width: '100%'}}>
         <GoogleMapReact
                        bootstrapURLKeys={{key:'AIzaSyBw74zIVpg0E4GzS1gb6voAidAf6pAxDZM'}}
                        defaultCenter={{lat: lat, lng: lng}}
