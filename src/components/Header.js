@@ -3,7 +3,7 @@ import '../../src/Hike.css'
 
 const Header = () => {
     return(
-        <div class="ui menu header" style={{marginBottom: "0px"}}>
+        <div class="ui menu head" style={{marginBottom: "0px"}}>
             <div class="header item">
                 NatureWalk
             </div>
