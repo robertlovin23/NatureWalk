@@ -20,7 +20,7 @@ const HikeCard = ({ hike }) => {
                         <b>Difficulty: </b>{hike.difficulty}
                     </div>
                     <div className="description" style={{marginBottom:"10px"}}>
-                        <b>Miles: </b>{hike.length}
+                        <b>Miles: </b>{hike.length} miles
                     </div>
                     <div className="description">
                         {hike.summary}
@@ -42,7 +42,7 @@ const HikeCard = ({ hike }) => {
                                     <b>Difficulty: </b>{hike.difficulty}
                                 </div>
                                 <div style={{marginBottom: '1px'}}>
-                                    <b>Miles: </b> {hike.length}
+                                    <b>Miles: </b> {hike.length} miles
                                 </div> 
                                 <div style={{marginBottom: "1px"}}>
                                     <b>Elevation Gain:</b> {elGain} ft.
