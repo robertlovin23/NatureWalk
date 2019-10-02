@@ -1,11 +1,30 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
+import { Modal } from 'semantic-ui-react'
 import '../../Hike.css'
 
-const Marker = () => {
-    return(
-        <i className="big map pin icon"/>
-    )
+class Marker extends React.Component {
+    constructor(){
+        super()
+        this.state={
+            open: false
+        }
+    }
+    onOpen(){
+        this.setState({
+            open: true
+        })
+    }
+    onHide(){
+        this.setState({
+            open: false
+        })
+    }
+    render() {
+        return(
+            <i className="big map pin icon"/>
+        )
+    }
 }
 
 const HikeMap = ({hikes,lat,lng}) => {
@@ -24,7 +43,9 @@ const HikeMap = ({hikes,lat,lng}) => {
                             lat={hike.latitude}
                             lng={hike.longitude}
                             text={hike.name}
-                        />
+                            style={{color: `${hike.difficulty}`}}
+                        >
+                        </Marker>
                      )
                  })
             }

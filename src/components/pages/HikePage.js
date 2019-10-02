@@ -87,6 +87,38 @@ class HikePage extends React.Component{
       </div>
       );
     });
+    if(!this.state.hikes){
+      return(
+      <div>
+      <div className="sixteen column row splashScreen">
+        <div className="titleDiv">
+          <SearchBar onFormSubmit={this.onTermSubmit}/>
+        </div>
+      </div>
+      <Tabs className="ui container" selectedIndex={this.state.tabIndex} onSelect={tabIndex => this.setState({ tabIndex })}>
+        <TabList style={{listStyle: 'none', display:"table", paddingLeft: "10px"}}>
+            <Tab style={{display: "inline", paddingRight: "10px"}}>
+                <i className="big list icon"/>
+            </Tab>
+            <Tab style={{display: "inline"}}>
+                <i className="big map icon"/>
+            </Tab>
+        </TabList>
+        <TabPanel>
+        <div class="ui active inverted dimmer">
+            <div class="ui text loader">Loading...</div>
+        </div>
+        </TabPanel>
+        <TabPanel>
+        <div class="ui active inverted dimmer">
+            <div class="ui text loader">Loading...</div>
+        </div>
+        </TabPanel>
+      </Tabs>
+
+    </div>
+    )
+    }
     return (
       <div>
         <div className="sixteen column row splashScreen">

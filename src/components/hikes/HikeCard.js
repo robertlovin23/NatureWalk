@@ -1,12 +1,11 @@
 import React from 'react'
 import { Button, Modal } from 'semantic-ui-react'
 import HikeMap from './GoogleMap'
-
 import '../../Hike.css'
 
 const HikeCard = ({ hike }) => {
         return(
-        <div className="column" key={hike.id} style={{width: "100%!important"}}>
+        <div className="column cardColumn" key={hike.id} style={{width: "100%!important"}}>
             <div className="ui card" style={{width: "100%", marginBottom: "20px"}}>
                 <div className="image">
                     <img src={hike.imgMedium} alt={hike.summary} className="imgSize"/>
