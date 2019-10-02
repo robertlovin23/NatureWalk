@@ -27,7 +27,7 @@ const HikeCard = ({ hike }) => {
                     </div>
                 </div>
                 <div>
-                <Modal trigger={<Button className="ui primary button" style={{width: "100%"}}>Learn More</Button>}>
+                <Modal trigger={<Button className="ui primary button" style={{width: "100%"}}>Learn More</Button>}  closeIcon>
                         <div className="header">
                             {hike.name}
                         </div>
