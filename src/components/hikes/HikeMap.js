@@ -29,7 +29,7 @@ class Marker extends React.Component {
 
 const HikeMap = ({hikes,lat,lng}) => {
     return(
-    <div className="ui container mapStyles" style={{ width: '100%'}}>
+    <div className="ui container mapStyles">
         <GoogleMapReact
                        bootstrapURLKeys={{key:'AIzaSyBw74zIVpg0E4GzS1gb6voAidAf6pAxDZM'}}
                        defaultCenter={{lat: lat, lng: lng}}
