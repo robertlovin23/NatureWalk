@@ -4,6 +4,8 @@ import HikeMap from './GoogleMap'
 import '../../Hike.css'
 
 const HikeCard = ({ hike }) => {
+        const elGain = hike.high - hike.low
+        console.log(elGain)
         return(
         <div className="column cardColumn" key={hike.id} style={{width: "100%!important"}}>
             <div className="ui card" style={{width: "100%", marginBottom: "20px"}}>
@@ -40,8 +42,11 @@ const HikeCard = ({ hike }) => {
                                     <b>Difficulty: </b>{hike.difficulty}
                                 </div>
                                 <div style={{marginBottom: '1px'}}>
-                                    <b>Miles: </b>{hike.length}
-                                </div>                
+                                    <b>Miles: </b> {hike.length}
+                                </div> 
+                                <div style={{marginBottom: "1px"}}>
+                                    <b>Elevation Gain:</b> {elGain} ft.
+                                </div>              
                                 <div style={{marginBottom: '1px'}}>
                                     <b> Latest Conditions:</b><p>{hike.conditionDetails}</p>
                                 </div>

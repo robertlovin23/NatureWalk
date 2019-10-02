@@ -51,6 +51,7 @@ class HikePage extends React.Component{
          lat: hikedata.data.trails[0].latitude,
          lng: hikedata.data.trails[0].longitude
      })
+     console.log(this.state.hikes)
  }
  onTermSubmit = (term, minLength,minStars,filter,maxDistance) => {
   Geocode.fromAddress(term).then(
